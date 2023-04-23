@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hello
+    <script>
+        let str = "hello, this is a this is string";
+        console.log(str.length);                    // gives the length of a string. This method is same as in array.
+
+        console.log(str.indexOf("this"));           // returns the index of 't' from the first occurence of 'this'.
+
+        console.log(str.lastIndexOf("this"));       // returns the last index of 't' from the last occurence of 'this'.
+
+        console.log(str.slice(0, 5));               // returns the elements from index 0 to index 4.
+
+        let str2 = str.replace("this", "that");     // replaces only the first occurence. (replaces "this" with "that").
+        console.log("out str2: ", str2);
+        str = str.replace("is", "was");
+        console.log("our str : ", str);
+
+    </script>
+</body>
+</html>

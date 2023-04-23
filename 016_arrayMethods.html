@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hello
+    <script>
+        let arr = [32,342,"fds", null, true, undefined, 432];
+        console.log("complete array : ", arr);
+        console.log(arr.length);        // length of the array.
+
+        arr.pop();                      // to remove the last element.
+        console.log("array after popping : ", arr);
+
+        arr.push("hello all");          // to add an element at the last of the array.
+        console.log("array after pushing : ", arr);
+
+        arr.shift();                    // to remove the first element.
+        console.log("array after shifting : ", arr);
+
+        arr.unshift("yes");             // add element at the starting.
+        console.log("array after unshifting : ", arr);
+
+        let x = arr.unshift("no");      // this will return the size of the array after adding "no" at the starting.
+        console.log(x);
+        console.log(arr);
+
+        console.log("to string : ");
+        let y = arr.toString;           // outputs array as string.
+        console.log(y);
+
+        let arr2 = [34,2432,654,213,343124];
+        arr2.sort;                      // this method first converts the elements to string and then sorts them as if they are in dictionary. example : out of 43 and 231, if we convert them to string, and store them in a dictionary, 231 would come before 43. The same way .sort() method sorts the array here.
+        console.log(arr2);
+    </script>
+</body>
+</html>
