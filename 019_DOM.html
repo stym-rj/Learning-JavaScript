@@ -6,14 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .add-class {
+        background-color: aquamarine;
+        border-style: dashed solid double;
+    }
+</style>
 <body>
     <div class="container" id = 'c1'>
-        <button>hello</button>
-
-        <script>
-            let a = document.getElementById('c1');          // returns everything inside that id.
-            console.log(a);
-        </script>
+        hello
+        <button>hey</button>
+        <button>bye</button>
     </div>
+
+    <div class="container">
+        <b></b>javascript
+        <button>this</button>
+    </div>
+
+    <script>
+        // https://www.w3schools.com/jsref/dom_obj_style.asp
+        let a = document.getElementById('c1');          // returns everything inside that id.
+        console.log(a);
+
+        let b = document.getElementsByClassName("container");       // returns array of HTMLCollection. 
+        // this is an array because there can be multiple divs with class named as "container". So, JS makes an array of such elements.
+        // each element can be accessed by using indexies like : b[0] will return the first div using the "container" class.
+        console.log(b);
+        console.log("------ accessing elements by using indexies");
+        console.log(b[0]);
+        console.log("------ accessing the second element : ");
+        console.log(b[1]);
+
+        b[1].style.background = "red";              // we can also change styles by using DOM like this.
+        b[1].style.fontFamily = "arial";
+        b[1].style.fontWeight = "bold";
+        b[1].style.fontStyle = "italic";
+        // NOTE : properties manipulated using DOM are considered to be of INLINE CSS.
+
+        b[0].style.font = "italic bold 50px juiceitc";          // to do these four properties in a single go, we need to pass all the four parameters, else it wont work.
+        // alert(b[0].style.font);         // this will pop an alert, showing the font properties
+        // alert(b[0].style.fontFamily);            // commenting this for now, cus irritating.
+
+        console.log(b[0].style);
+        console.log("---------=======----------");
+        console.log(b[0].style.fontFamily);
+
+        b[1].classList.add("add-class");            // adds another class to second element of "container" class.
+
+        b[1].classList.remove("class-name");        // this removes the specified class.
+
+
+
+        console.log(b[1].innerHTML);                // gives all the HTML written inside that div.
+        console.log(b[1].innerText);                // gives all the text written inside that div.
+
+
+        tn = document.getElementsByTagName('button');        // gives all buttons access.
+        console.log(tn);
+        tn[1].style.background = "green";
+
+        // getElement and getElements are different.
+        // when we know that there can only be a single instance of that element, then we use 'getElement', for example : id (since id can only be one).
+        // when we know that there can be multiple instances of that element, then we use 'getElements', for example : class, button, etc (since same class can be used for multiple divs. And buttons can be multiple in a webpage.)
+
+
+        tn = document.getElementsByTagName('div');
+        createdElement = document.createElement('p');       // here we are creating a paragraph using 'createElement'
+        createdElement.innerText = "This is a paragraph created using DOM";         // here, we are setting innerText of the created paragraph 
+        createdElement.style.fontSize = 'small';
+        tn[1].appendChild(createdElement);           // here, we are putting that paragraph tag inside the second div in out HTML
+        // WE CAN USE THESE CREATED ELEMENTS AT ONLY 1 PLACE AT A TIME.
+
+
+
+        createdElement1 = document.createElement('p');       // here we are creating a paragraph using 'createElement'
+        createdElement1.innerText = "This is a paragraph created using DOM";         // here, we are setting innerText of the created paragraph 
+        createdElement1.style.fontSize = 'small';
+        createdElement2 = document.createElement('b');
+        createdElement2.innerText = "This is a bold line created using DOM";
+        createdElement2.style.fontSize = 'small';
+        tn[0].appendChild(createdElement1);
+        setTimeout(function () {
+            tn[0].replaceChild(createdElement2, createdElement1);
+        }, 3000);
+
+        // there are other methods too for removing elements, deleting elements, etc. TODO : EXPLORE THEM FROM DOCUMENTATIONS
+
+
+        console.log("querrySelector-----------");
+        sel = document.querySelector('.container');         // gives every HTML as well CSS properties.
+        console.log(sel);
+        sel2 = document.querySelectorAll('.container');         // gives all divs associated with this class.
+    </script>
 </body>
 </html>
