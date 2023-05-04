@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="abc" id = "qwe">hello</div>
+    <div class="xyz">byee</div>
+
+
+    <script>
+        let prevContent = document.getElementsByClassName("abc")[0].innerHTML;
+        qwe.addEventListener("mousedown", function(){
+            console.log("mouse is being pressed");
+            document.querySelectorAll(".abc")[0].innerHTML = "<b> pressing </b>";
+        })
+        
+        
+        qwe.addEventListener("mouseup", function(){
+            console.log("mouse pressing ended");
+            document.querySelectorAll(".abc")[0].innerHTML = prevContent;
+        })
+    </script>
+</body>
+</html>

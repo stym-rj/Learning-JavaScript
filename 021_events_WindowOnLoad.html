@@ -1,0 +1,28 @@
+<!-- used to perform any actions. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>hey</button>
+    hello
+
+    <script>
+        window.onload = loaded();           // if we put this one after the 'another method', then the another method wont be executed.
+        // another method : 
+        window.onload = function() {            // this acts like a lambda function.
+            console.log("the document was loaded");
+        }
+
+        function loaded() {
+            console.log("another method to set function on 'window.onload'");
+        }
+
+    </script>
+</body>
+</html>

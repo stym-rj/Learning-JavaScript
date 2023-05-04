@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="tempID">hey</button>
+    <div>click meeeeeeeee</div>
+    hello
+
+    <script>
+        document.getElementById("tempID").addEventListener("click", function() {
+            console.log("clickedddd");
+        })
+
+        tempID.addEventListener("click", function() {           // we can also add anything to an ID without using document.getElementById("id_name")
+            console.log("another method");
+        })
+
+        // the id of any object can be reffered directly.
+        // example : 
+        // 'document.getElementbyId("tempID")' is same as 'tempID'. because there can be only one element with that ID.
+
+        tempID.addEventListener("mouseover", function(){            // when mouse is on the object.
+            console.log("mouse was hovered!");
+        })
+
+        tempID.addEventListener("mouseout", function(){         // when we move our mouse out of the object.
+            console.log("mouse is now out of the object");
+        })
+    </script>
+</body>
+
+</html>

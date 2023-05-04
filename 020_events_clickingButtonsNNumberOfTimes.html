@@ -14,9 +14,11 @@
 
     <script>
         var count = 0;
+        var arrayOfColors = ['red', 'green', 'blue', 'pink', 'purple'];
         function clicked() {
             console.log("function clicked successfully.");
-            count++;
+            let changeColor = document.getElementsByTagName('button');
+            changeColor[0].style.background = arrayOfColors[count++];
             if (count > 9) {
                 console.log("clicked 10 times");
                 count = 0;
