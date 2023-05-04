@@ -1,0 +1,36 @@
+<!-- JavaScript Object Notation -->
+<!-- used to exchange data -->
+<!-- the data is exchanged in a string format and that string can be converted to JSON while recieving the string data. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    lets goooooooooooooooooooooooooo <br>
+    JSON sikhenge ab!!!!
+
+    <script>
+
+        // JSON only supports double quotes("") unline JavaScript.
+
+        obj = {name : "satyam", title : "raj", xyz : {abc : "efg"}};         // creating an object
+        console.log(obj);
+        console.log(typeof obj);                        // printing the data type of 'obj'
+
+        // object to string
+        console.log("------------object to string------------");
+        a = JSON.stringify(obj);                        // converting the data to string using stringify() method.
+        console.log(typeof a);
+        console.log(a);
+
+        // string to JSON
+        console.log("------------string to JSON------------");
+        b = JSON.parse(a);
+        console.log(b);
+    </script>
+</body>
+</html>
