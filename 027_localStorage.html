@@ -32,6 +32,12 @@
         localStorage.setItem('name', 'raj');
         // to get the value of a key :
         console.log(localStorage.getItem('name'));
+
+        // removing an item from local storage
+        localStorage.setItem('this', 'that');
+        localStorage.setItem('xyz', 'abc');
+        localStorage.removeItem('this');
+        console.log(localStorage);
     </script>
 </body>
 </html>
