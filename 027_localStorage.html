@@ -1,0 +1,37 @@
+<!-- local storage in js is used to store data as string in user's computer, Locally. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    heyyy
+
+
+    <script>
+        // every site has its own local storage stored in our PC.
+        // we should never put too many data in our local storage.
+        // we should never put privacy related data in our local storage, for example : passwords.
+        localStorage.setItem('name', 'satyam');         // sets this key value pair in local storage
+        // here, this storage works as key value pair.
+        // here, 'name' is the key and 'satyam' is a value for that key.
+
+        // we can see our local storage using 'localStorage' - (see below)
+        console.log(localStorage);
+
+        // we can clear our local storage using : clear() - (see below)
+        localStorage.clear();
+        console.log("local storage cleared");
+        console.log(localStorage);
+
+
+        localStorage.setItem('name', 'raj');
+        // to get the value of a key :
+        console.log(localStorage.getItem('name'));
+    </script>
+</body>
+</html>
